@@ -4,19 +4,18 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite o saldo");
+        System.out.print("Digite Saldo Inicial: ");
+        double saldoInicial = scanner.nextDouble();
 
-        double saldo = scanner.nextDouble();
+        double saldoFinal = saldoInicial;
 
         for (int i = 1; i <= 3; i++) {
-
-            System.out.print("Digite o valor da transação " + i);
-
-            saldo += scanner.nextDouble();
+            System.out.print("Enter valor :" + i + ": ");
+            double transacao = scanner.nextDouble();
+            saldoFinal += transacao;
         }
 
-        // Saldo final
-        System.out.printf("Saldo final da conta: %.2f\n", saldo);
+        System.out.printf("O saldo final da conta bancária após as três transações : %.2f%n", saldoFinal);
 
         scanner.close();
     }
